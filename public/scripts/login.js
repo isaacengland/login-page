@@ -1,4 +1,4 @@
-import { checkCredentials } from './checkCredentials.js';
+import { verifyCredentials } from './verifyCredentials.js';
 
 const form = document.getElementById('login-form');
 form.addEventListener('submit', (e) => {
@@ -12,16 +12,11 @@ form.addEventListener('submit', (e) => {
 		.then((response) => response.json())
 		.then((data) => {
 			data.forEach((user) => {
-				if (checkCredentials(user.username, user.password)) {
+				if (verifyCredentials(user.username, user.password)) {
 					console.log('User found!');
 				} else {
 					console.log('User not found!');
 				}
 			});
 		});
-});
-
-const signUp = document.getElementById('sign-up-btn');
-signUp.addEventListener('click', (e) => {
-	//serve signup page
 });

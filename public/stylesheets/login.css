@@ -1,0 +1,69 @@
+html {
+  background-color: #507DBC;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+h1 {
+  margin: 2em auto 2em auto;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F7F8;
+  height: 60vh;
+  width: 25vw;
+  border-radius: 15px;
+}
+#main > h2 {
+  align-self: center;
+  margin-bottom: 0.25em;
+}
+#main > hr {
+  color: black;
+  width: 75%;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#login-form > fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  margin: 1em 0;
+}
+#login-form > fieldset > input {
+  width: 85%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+#login-form > button {
+  width: 70%;
+  margin-top: 2em;
+  border: none;
+  border-radius: 30px;
+  background-color: #507DBC;
+  padding: 1em;
+  font-size: 1em;
+}
+
+#sign-up {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=login.css.map */

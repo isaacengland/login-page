@@ -10,10 +10,10 @@ POST http://127.0.0.1:3000/users
 Content-Type: application/json  
 
 {
-    "username": "TheBeanKing",
-    "password": "456"
+    "username": "hello_world",
+    "password": "12345678"
 }
 
 ###
 
-DELETE http://127.0.0.1:3000/users/63db15500b51343905f4f28c
+DELETE http://127.0.0.1:3000/users/

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Company XYZ - Login</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="./stylesheets/login.css" />
+	</head>
+	<body>
+		<h1>Welcome to Company XYZ</h1>
+		<div id="main">
+			<h2>Login</h2>
+			<hr />
+			<form id="login-form">
+				<fieldset>
+					<input
+						type="username"
+						name="username-input"
+						id="username-input"
+						placeholder="Username"
+						autocomplete="off" />
+				</fieldset>
+				<fieldset>
+					<input
+						type="password"
+						name="password-input"
+						placeholder="Password"
+						id="password-input" />
+					<p>
+						<a href="http://localhost:3000/login"
+							>Forgot password?</a
+						>
+					</p>
+				</fieldset>
+				<button id="login-btn" type="submit">Login</button>
+			</form>
+			<div id="sign-up">
+				<p>
+					Not a member yet?
+					<a href="http://localhost:3000/register">Sign Up</a>
+				</p>
+			</div>
+		</div>
+	</body>
+	<script src="./scripts/login.js" type="module" async defer></script>
+</html>

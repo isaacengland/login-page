@@ -1,4 +1,4 @@
-export const checkCredentials = (username, password) => {
+export const verifyCredentials = (username, password) => {
 	const usernameInput = document.getElementById('username-input').value;
 	const passwordInput = document.getElementById('password-input').value;
 	if (usernameInput === username && passwordInput === password) {

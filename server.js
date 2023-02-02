@@ -3,7 +3,9 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const mongoose = require('mongoose');
-const serveStatic = require('serve-static');
+
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Connect to MongoDB
 mongoose.set('strictQuery', true);
@@ -14,14 +16,14 @@ const db = mongoose.connection;
 db.on('error', (error) => console.error(error));
 db.once('open', () => console.log('Connected to Database'));
 
-// Serve static files
-app.use(serveStatic(path.join(__dirname, 'public')));
-app.use(express.json());
-
 // Routes
-const usersRouter = require('./routes/users');
+const viewsRouter = require('./routes/views.js');
+app.use('/', viewsRouter);
+
+const usersRouter = require('./routes/users.js');
 app.use('/users', usersRouter);
 
+// Listen on port
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
