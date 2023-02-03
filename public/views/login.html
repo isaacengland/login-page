@@ -22,7 +22,7 @@
 						placeholder="Username"
 						autocomplete="off" />
 				</fieldset>
-				<fieldset>
+				<fieldset id="password-fieldset">
 					<input
 						type="password"
 						name="password-input"
@@ -34,6 +34,8 @@
 						>
 					</p>
 				</fieldset>
+				<div id="error-msg">Invalid username/password</div>
+				<div id="success-msg">Login successful</div>
 				<button id="login-btn" type="submit">Login</button>
 			</form>
 			<div id="sign-up">

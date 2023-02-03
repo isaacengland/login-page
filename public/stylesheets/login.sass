@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiko&family=Heebo&family=Nunito+Sans&display=swap')
+
 html
-    background-color: #507DBC
+    background-image: url('./login-background.svg')
 
 body
     display: flex
@@ -7,9 +9,19 @@ body
     justify-content: center
     align-items: center
     height: 100%
+    font-family: 'Amiko', sans-serif
+    & a
+        text-decoration: none
+        color: #507DBC
+        &:hover
+            cursor: pointer
+            text-decoration: underline
 
 h1
     margin: 2em auto 2em auto
+    font-family: 'Heebo', sans-serif
+    font-size: 2em
+    color: #F6F7F8
 
 #main
     display: flex
@@ -21,9 +33,9 @@ h1
     & > h2
         align-self: center
         margin-bottom: .25em
+        font-family: 'Nunito Sans', sans-serif
     & > hr
-        color: black
-        width: 75%
+        width: 85%
 
 #login-form
     display: flex
@@ -42,8 +54,12 @@ h1
             width: 85%
             background-color: transparent
             border: none
-            border-bottom: 1px solid black
+            border-bottom: 2px solid black
             padding-bottom: 5px
+            &:focus
+                outline: none
+                border-bottom: 2px solid #507DBC
+                color: #507DBC
     & > button
         width: 70%
         margin-top: 2em
@@ -51,7 +67,25 @@ h1
         border-radius: 30px
         background-color: #507DBC
         padding: 1em
-        font-size: 1em
+        font: bold 1em 'Nunito Sans', sans-serif
+        color: white
+        &:hover
+            cursor: pointer
+            background-color: #3D5F8A
+
+#error-msg
+    color: rgb(221, 14, 14)
+    position: relative
+    height: 1em
+    font-size: .8em
+    display: none
+
+#success-msg
+    color: rgb(14, 221, 14)
+    position: relative
+    height: 1em
+    font-size: .8em
+    display: none
 
 #sign-up
     display: flex
