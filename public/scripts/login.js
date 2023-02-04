@@ -3,7 +3,7 @@ import { verifyCredentials } from './verifyCredentials.js';
 const usernameInput = document.getElementById('username-input');
 const passwordInput = document.getElementById('password-input');
 
-const form = document.getElementById('login-form');
+const form = document.getElementById('main-form');
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
 
@@ -38,22 +38,24 @@ form.addEventListener('submit', (e) => {
 		})
 			.then((response) => response.json())
 			.then((data) => {
-				data.forEach((user) => {
-					if (
-						verifyCredentials(user.username, user.password) ||
-						false
-					) {
-						document.getElementById('success-msg').style.display =
-							'block';
-						document.getElementById('error-msg').style.display =
-							'none';
-					} else {
-						document.getElementById('error-msg').style.display =
-							'block';
-						document.getElementById('success-msg').style.display =
-							'none';
-					}
-				});
+				if (data.length != 0) {
+					data.forEach((user) => {
+						const message = document.getElementById('message');
+						if (verifyCredentials(user.username, user.password)) {
+							message.classList.remove('error-msg');
+							message.classList.add('success-msg');
+							message.innerHTML = `Welcome back, ${user.username}!`;
+						} else {
+							message.classList.remove('success-msg');
+							message.classList.add('error-msg');
+							message.innerHTML = 'Invalid username or password';
+						}
+					});
+				} else {
+					message.classList.remove('success-msg');
+					message.classList.add('error-msg');
+					message.innerHTML = 'Invalid username or password';
+				}
 			});
 	}
 });

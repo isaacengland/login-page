@@ -6,14 +6,14 @@
 		<title>Company XYZ - Login</title>
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="./stylesheets/login.css" />
+		<link rel="stylesheet" href="./stylesheets/index.css" />
 	</head>
 	<body>
 		<h1>Welcome to Company XYZ</h1>
 		<div id="main">
 			<h2>Login</h2>
 			<hr />
-			<form id="login-form">
+			<form id="main-form">
 				<fieldset>
 					<input
 						type="username"
@@ -28,15 +28,14 @@
 						name="password-input"
 						placeholder="Password"
 						id="password-input" />
-					<p>
+					<p id="forgot-password">
 						<a href="http://localhost:3000/login"
 							>Forgot password?</a
 						>
 					</p>
 				</fieldset>
-				<div id="error-msg">Invalid username/password</div>
-				<div id="success-msg">Login successful</div>
-				<button id="login-btn" type="submit">Login</button>
+				<div id="message"></div>
+				<button id="submit-btn" type="submit">Login</button>
 			</form>
 			<div id="sign-up">
 				<p>

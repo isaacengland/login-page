@@ -6,25 +6,46 @@
 		<title>Company XYZ - Register</title>
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="" />
+		<link rel="stylesheet" href="./stylesheets/index.css" />
 	</head>
 	<body>
-		<form id="register-form">
-			<label for="username-input">Username</label>
-			<input
-				type="username"
-				name="username-input"
-				id="username-input"
-				autocomplete="off" />
-			<label for="password-input">Password</label>
-			<input type="password" name="password-input" id="password-input" />
-			<label for="confirm-password-input">Confirm Password</label>
-			<input
-				type="password"
-				name="confirm-password-input"
-				id="confirm-password-input" />
-			<button type="submit">Register</button>
-		</form>
+		<h1>Welcome to Company XYZ</h1>
+		<div id="main">
+			<h2>Register</h2>
+			<hr />
+			<form id="main-form">
+				<fieldset>
+					<input
+						type="username"
+						name="username-input"
+						id="username-input"
+						placeholder="Username"
+						autocomplete="off" />
+				</fieldset>
+				<fieldset>
+					<input
+						type="password"
+						name="password-input"
+						id="password-input"
+						placeholder="Password" />
+				</fieldset>
+				<fieldset>
+					<input
+						type="password"
+						name="confirm-password-input"
+						id="confirm-password-input"
+						placeholder="Confirm Password " />
+				</fieldset>
+				<div id="message"></div>
+				<button id="submit-btn" type="submit">Register</button>
+			</form>
+			<div id="back-to-login">
+				<p>
+					Already a member?
+					<a href="http://localhost:3000/login">Login</a>
+				</p>
+			</div>
+		</div>
 	</body>
 	<script src="./scripts/register.js" type="module" async defer></script>
 </html>

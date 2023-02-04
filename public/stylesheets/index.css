@@ -21,7 +21,7 @@ body a:hover {
 }
 
 h1 {
-  margin: 2em auto 2em auto;
+  margin: 2em auto 1em auto;
   font-family: "Heebo", sans-serif;
   font-size: 2em;
   color: #F6F7F8;
@@ -44,13 +44,13 @@ h1 {
   width: 85%;
 }
 
-#login-form {
+#main-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#login-form > fieldset {
+#main-form > fieldset {
   border: none;
   display: flex;
   flex-direction: column;
@@ -59,19 +59,30 @@ h1 {
   width: 85%;
   margin: 1em 0;
 }
-#login-form > fieldset > input {
+#main-form > fieldset > input {
   width: 85%;
   background-color: transparent;
   border: none;
   border-bottom: 2px solid black;
   padding-bottom: 5px;
 }
-#login-form > fieldset > input:focus {
+#main-form > fieldset > input:focus {
   outline: none;
   border-bottom: 2px solid #507DBC;
   color: #507DBC;
 }
-#login-form > button {
+#main-form > fieldset > #forgot-password {
+  align-self: flex-start;
+  margin-left: 2em;
+  font-size: 0.8em;
+  color: #507DBC;
+}
+#main-form > fieldset > #forgot-password:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#submit-btn {
   width: 70%;
   margin-top: 2em;
   border: none;
@@ -81,28 +92,40 @@ h1 {
   font: bold 1em "Nunito Sans", sans-serif;
   color: white;
 }
-#login-form > button:hover {
+#submit-btn:hover {
   cursor: pointer;
   background-color: #3D5F8A;
 }
 
-#error-msg {
+#message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1em;
+  width: 100%;
+  font-size: 0.8em;
+}
+
+.error-msg {
   color: rgb(221, 14, 14);
   position: relative;
   height: 1em;
   font-size: 0.8em;
-  display: none;
 }
 
-#success-msg {
+.success-msg {
   color: rgb(14, 221, 14);
   position: relative;
   height: 1em;
   font-size: 0.8em;
-  display: none;
 }
 
 #sign-up {
   display: flex;
   justify-content: center;
-}/*# sourceMappingURL=login.css.map */
+}
+
+#back-to-login {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=index.css.map */

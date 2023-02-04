@@ -18,7 +18,7 @@ body
             text-decoration: underline
 
 h1
-    margin: 2em auto 2em auto
+    margin: 2em auto 1em auto
     font-family: 'Heebo', sans-serif
     font-size: 2em
     color: #F6F7F8
@@ -37,7 +37,7 @@ h1
     & > hr
         width: 85%
 
-#login-form
+#main-form
     display: flex
     flex-direction: column
     justify-content: center
@@ -60,33 +60,52 @@ h1
                 outline: none
                 border-bottom: 2px solid #507DBC
                 color: #507DBC
-    & > button
-        width: 70%
-        margin-top: 2em
-        border: none
-        border-radius: 30px
-        background-color: #507DBC
-        padding: 1em
-        font: bold 1em 'Nunito Sans', sans-serif
-        color: white
-        &:hover
-            cursor: pointer
-            background-color: #3D5F8A
+        & > #forgot-password
+            align-self: flex-start
+            margin-left: 2em
+            font-size: .8em
+            color: #507DBC
+            &:hover
+                cursor: pointer
+                text-decoration: underline
 
-#error-msg
+#submit-btn
+    width: 70%
+    margin-top: 2em
+    border: none
+    border-radius: 30px
+    background-color: #507DBC
+    padding: 1em
+    font: bold 1em 'Nunito Sans', sans-serif
+    color: white
+    &:hover
+        cursor: pointer
+        background-color: #3D5F8A
+
+#message
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 1em
+    width: 100%
+    font-size: .8em
+
+.error-msg
     color: rgb(221, 14, 14)
     position: relative
     height: 1em
     font-size: .8em
-    display: none
 
-#success-msg
+.success-msg
     color: rgb(14, 221, 14)
     position: relative
     height: 1em
     font-size: .8em
-    display: none
 
 #sign-up
+    display: flex
+    justify-content: center
+
+#back-to-login
     display: flex
     justify-content: center
